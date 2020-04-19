@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-04-18T12:21:57</date>
+  <millis>1587208917088</millis>
+  <sequence>0</sequence>
+  <logger>com.elibrary.util</logger>
+  <level>SEVERE</level>
+  <class>com.elibrary.util.WriteLogEntriesToLogFile</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>severe message</message>
+</record>
+<record>
+  <date>2020-04-18T12:21:57</date>
+  <millis>1587208917108</millis>
+  <sequence>1</sequence>
+  <logger>com.elibrary.util</logger>
+  <level>WARNING</level>
+  <class>com.elibrary.util.WriteLogEntriesToLogFile</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>warning message</message>
+</record>
+<record>
+  <date>2020-04-18T12:21:57</date>
+  <millis>1587208917109</millis>
+  <sequence>2</sequence>
+  <logger>com.elibrary.util</logger>
+  <level>INFO</level>
+  <class>com.elibrary.util.WriteLogEntriesToLogFile</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>info message</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-04-18T21:05:32</date>
+  <millis>1587240332669</millis>
+  <sequence>0</sequence>
+  <logger>com.elibrary.util</logger>
+  <level>SEVERE</level>
+  <class>com.elibrary.util.WriteLogEntriesToLogFile</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>severe message</message>
+</record>
+<record>
+  <date>2020-04-18T21:05:32</date>
+  <millis>1587240332689</millis>
+  <sequence>1</sequence>
+  <logger>com.elibrary.util</logger>
+  <level>WARNING</level>
+  <class>com.elibrary.util.WriteLogEntriesToLogFile</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>warning message</message>
+</record>
+<record>
+  <date>2020-04-18T21:05:32</date>
+  <millis>1587240332689</millis>
+  <sequence>2</sequence>
+  <logger>com.elibrary.util</logger>
+  <level>INFO</level>
+  <class>com.elibrary.util.WriteLogEntriesToLogFile</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>info message</message>
+</record>
+</log>

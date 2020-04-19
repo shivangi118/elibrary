@@ -1,0 +1,76 @@
+<h3>Add Librarian</h3>
+  <form action="AddLibrarian" method="post" style="width:300px" name = "Lregistration" onSubmit = "return validate()">
+  <div class="form-group">
+    <label for="name1">Name</label>
+    <input type="text" class="form-control" name="name" required id="name1" placeholder="Name"/>
+  </div>
+  <div class="form-group">
+    <label for="email1">Email address</label>
+    <input type="email" class="form-control" name="email" required id="email1" placeholder="Email"/>
+  </div>
+  <div class="form-group">
+    <label for="password1">Password</label>
+    <input type="password" class="form-control" name="password" minlength="8" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="password1" placeholder="Password"/>
+    <meter max="4" id="password-strength-meter"></meter>
+    <p id="password-strength-text"></p>
+    <small>Password should meet the following requirements</small>
+    <ul>
+  		<li><small>A lowercase letter</small></li>
+  		<li><small>An uppercase letter</small></li>
+  		<li><small>A number</small></li>
+  		<li><small>Minimum 8 characters</small></li>
+	</ul> 
+    <script type="text/javascript">
+            var strength = {
+              0: "Weakest",
+              1: "Weak",
+              2: "OK",
+              3: "Good",
+              4: "Strong"
+            }
+             
+            var password = document.getElementById('password1');
+            var meter = document.getElementById('password-strength-meter');
+            var text = document.getElementById('password-strength-text');
+ 
+            password.addEventListener('input', function() {
+                var val = password.value;
+                var result = zxcvbn(val);
+ 
+                // This updates the password strength meter
+                meter.value = result.score;
+ 
+                // This updates the password meter text
+                if (val !== "") {
+                    text.innerHTML = "Password Strength: " + strength[result.score]; 
+                } else {
+                    text.innerHTML = "";
+                }
+            });
+        </script>
+  </div>
+  <div class="form-group">
+    <label for="cpassword1">Confirm Password</label>
+    <input type="password" class="form-control" name="cpassword" id="cpassword1" placeholder="Password"/>
+  
+  </div>  
+  <div class="form-group">
+    <label for="mobile1">Mobile Number</label>
+    <input type="number" class="form-control" name="mobile" required id="mobile1" placeholder="Mobile"/>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  
+  <script type="text/javascript">
+  		function validate(){
+  			if (document.Lregistration.password1.value != document.Lregistration.cpassword1.value){
+  				alert("Passwords do not match!!");
+  				document.Lregistration.cpassword1.focus();
+  				return false
+  			}
+  			
+  			return true
+  		}
+  	</script>
+  
+  
+</form>
