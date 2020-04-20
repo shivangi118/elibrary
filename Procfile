@@ -1,1 +1,1 @@
-web: java -jar target/Elibrary.war
+web: java -war target/Elibrary.war
