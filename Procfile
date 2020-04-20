@@ -1,1 +1,2 @@
-web: java -war target/Elibrary.war
+buildpacks:clear
+war:deploy target/Elibrary.war
