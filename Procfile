@@ -1,2 +1,1 @@
-buildpacks:clear
-war:deploy target/Elibrary.war
+web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/Elibrary.war
