@@ -16,15 +16,16 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Shivangi/Desktop/mysql-connector-java-8.0.19.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Shivangi/Desktop/jbcrypt-0.3m.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Shivangi/Desktop/javax.json-api-1.1.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Shivangi/Desktop/javax.json-1.0.4.jar"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Shivangi/NCI/SPW-Project/ELibrary/WebContent/WEB-INF/lib/javax.json-1.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Shivangi/NCI/SPW-Project/ELibrary/WebContent/WEB-INF/lib/javax.json-api-1.1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Shivangi/NCI/SPW-Project/ELibrary/WebContent/WEB-INF/lib/jbcrypt-0.3m.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Shivangi/NCI/SPW-Project/ELibrary/WebContent/WEB-INF/lib/mysql-connector-java-8.0.19.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Shivangi/NCI/SPW-Project/ELibrary/WebContent/WEB-INF/lib/ojdbc14.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
