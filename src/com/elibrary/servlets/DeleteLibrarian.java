@@ -11,14 +11,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.elibrary.dao.AdminDao;
 import com.elibrary.dao.LibrarianDao;
 @WebServlet("/DeleteLibrarian")
 public class DeleteLibrarian extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session=request.getSession();
 		PrintWriter out=response.getWriter();
+		AdminDao adminDao=new AdminDao();
 		String adminsession = (String) session.getAttribute("adminemail");
-		int loggedInStatus=LibrarianDao.checkLoggedInStatus(adminsession);
+		int loggedInStatus=adminDao.checkLoggedInStatus(adminsession);
 		if(loggedInStatus == 1) {
 		String sid=request.getParameter("id");
 		int id=Integer.parseInt(sid);

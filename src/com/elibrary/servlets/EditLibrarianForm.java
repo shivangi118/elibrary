@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.elibrary.beans.LibrarianBean;
+import com.elibrary.dao.AdminDao;
 import com.elibrary.dao.LibrarianDao;
 @WebServlet("/EditLibrarianForm")
 public class EditLibrarianForm extends HttpServlet {
@@ -21,7 +22,8 @@ public class EditLibrarianForm extends HttpServlet {
 		HttpSession session=request.getSession();
 		String adminsession = (String) session.getAttribute("adminemail");
 		int loggedInStatus;
-		loggedInStatus=LibrarianDao.checkLoggedInStatus(adminsession);
+		AdminDao adminDao=new AdminDao();
+		loggedInStatus=adminDao.checkLoggedInStatus(adminsession);
 		if(loggedInStatus == 1) {
 		PrintWriter out=response.getWriter();
 		out.print("<!DOCTYPE html>");
