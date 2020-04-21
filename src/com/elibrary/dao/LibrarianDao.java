@@ -60,7 +60,7 @@ public class LibrarianDao {
 				bean.setId(rs.getInt("id"));
 				bean.setName(rs.getString("name"));
 				bean.setEmail(rs.getString("email"));
-				bean.setPassword(rs.getString("password"));
+				bean.setPassword("*****");
 				bean.setMobile(rs.getLong("mobile"));
 				list.add(bean);
 			}
