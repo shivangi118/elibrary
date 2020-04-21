@@ -17,8 +17,8 @@ public class DeleteLibrarian extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session=request.getSession();
 		PrintWriter out=response.getWriter();
-		String librariansession = (String) session.getAttribute("email");
-		int loggedInStatus=LibrarianDao.checkLoggedInStatus(librariansession);
+		String adminsession = (String) session.getAttribute("adminemail");
+		int loggedInStatus=LibrarianDao.checkLoggedInStatus(adminsession);
 		if(loggedInStatus == 1) {
 		String sid=request.getParameter("id");
 		int id=Integer.parseInt(sid);

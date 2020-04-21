@@ -19,9 +19,9 @@ public class EditLibrarianForm extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		HttpSession session=request.getSession();
-		String librariansession = (String) session.getAttribute("email");
+		String adminsession = (String) session.getAttribute("adminemail");
 		int loggedInStatus;
-		loggedInStatus=LibrarianDao.checkLoggedInStatus(librariansession);
+		loggedInStatus=LibrarianDao.checkLoggedInStatus(adminsession);
 		if(loggedInStatus == 1) {
 		PrintWriter out=response.getWriter();
 		out.print("<!DOCTYPE html>");
