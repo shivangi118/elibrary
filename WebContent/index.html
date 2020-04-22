@@ -12,6 +12,21 @@ body {
 </style>
 </head>
 <body>
+<script type="text/javascript">
+var really= false;
+var allow=true;
+window.onbeforeunload = function(){
+	if (allow){
+		if(!really && true){
+			really=true;
+			var msg="Are you sure you want to close this website?";
+			return msg;
+		}
+	}else{
+			allow=true;
+		}
+	}
+</script>
 <nav class="navbar navbar-inverse">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
