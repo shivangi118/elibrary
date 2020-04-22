@@ -53,8 +53,6 @@ public class AdminLogin extends HttpServlet {
 		System.out.println("Captcha "+ verify);
 		HttpSession session=request.getSession();
 		session.setAttribute("adminemail",email);
-		getServletContext().log("email"+email);
-		getServletContext().log("password"+password);
 		AdminDao adminDao=new AdminDao();
 		int failed_attempts,lock_status,reset_failed_attempts,reset_timestamp,freeze_account,timeinterval,frozenstatus,loggedinstatus;
 		Timestamp timestamp_from_db,currentTimeStamp;

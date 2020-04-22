@@ -47,8 +47,6 @@ public class LibrarianLogin extends HttpServlet {
 		HttpSession session=request.getSession();
 		session.setAttribute("librarianemail",email);
 		String password1;
-		logger.info("password "+password);
-		logger.entering("username", email);
 		int failed_attempts,lock_status,reset_failed_attempts,reset_timestamp,freeze_account,timeinterval,frozenstatus,loggedinstatus;
 		Timestamp timestamp_from_db,currentTimeStamp;
 		frozenstatus=LibrarianDao.checkFrozenStatus(email);
