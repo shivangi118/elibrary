@@ -60,7 +60,6 @@ public class AdminLogin extends HttpServlet {
 		Timestamp timestamp_from_db,currentTimeStamp;
 		frozenstatus = adminDao.checkfrozenstatus(email);
 		if (frozenstatus == 1) {
-			//timeinterval
 			System.out.println("Account is frozen");
 			currentTimeStamp = new Timestamp(System.currentTimeMillis());
 			timestamp_from_db = adminDao.checkTimestamp(email);
@@ -77,19 +76,14 @@ public class AdminLogin extends HttpServlet {
 			{
 				System.out.println("Minutes are greater than equal to 5");
 				System.out.println(hours + minutes + " hours and minutes");
-				// frozenstatus == 0
 				frozenstatus=adminDao.resetFrozenAccount(email);
-				// numberofattempts == 0
 				reset_failed_attempts=adminDao.resetFailedAttempts(email);
-				//timestamp = null
 				reset_timestamp=adminDao.resetTimestamp(email);
-			
 			}
 		}
 		loggedinstatus = adminDao.checkLoggedInStatus(email);
 		if (adminDao.authenticate(email, password) && frozenstatus == 0 && loggedinstatus == 0 && verify){
 			System.out.println("In admin , Login Successful");
-			//HttpSession session=request.getSession();
 			session.setAttribute("admin","true");
 			adminDao.resetFailedAttempts(email);
 			request.getRequestDispatcher("navadmin.html").include(request, response);

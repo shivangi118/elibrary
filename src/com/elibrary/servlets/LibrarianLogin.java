@@ -68,12 +68,9 @@ public class LibrarianLogin extends HttpServlet {
 			if(hours >=1 || minutes >=5)
 					{
 						System.out.println("Minutes are greater than equal to 5");
-						System.out.println(hours + minutes + " hours and minutes");
-						// frozenstatus == 0
+						System.out.println(hours +" hours " + minutes + " minutes");
 						frozenstatus=LibrarianDao.resetFrozenAccount(email);
-						// numberofattempts == 0
 						reset_failed_attempts=LibrarianDao.resetFailedAttempts(email);
-						//timestamp = null
 						reset_timestamp=LibrarianDao.resetTimestamp(email);
 					}
 		}
@@ -88,7 +85,7 @@ public class LibrarianLogin extends HttpServlet {
 		}else{
 			failed_attempts=LibrarianDao.checkFailedAttempts(email);
 			if (failed_attempts < 5) {
-				System.out.println("Less than 5");
+				System.out.println("Less than 5 failed attempts");
 				failed_attempts=failed_attempts+1;
 				lock_status = LibrarianDao.setFailedTimestamp(email);
 				System.out.println("failed_attempts "+failed_attempts);
@@ -96,7 +93,7 @@ public class LibrarianLogin extends HttpServlet {
 			}else {
 				freeze_account=LibrarianDao.freezeAccount(email);
 				System.out.println(freeze_account + "freeze_account");
-				out.println("Your account has been locked");
+				out.println("Your account has been locked!");
 			}if (loggedinstatus == 1) {
 				request.getRequestDispatcher("navhome.html").include(request, response);
 				out.println("<div class='container'>");
